@@ -1,0 +1,114 @@
+[
+  {
+    "transactionId": "T1001",
+    "customerId": "C1",
+    "customerName": "John Smith",
+    "date": "2023-01-12",
+    "product": "Wireless Mouse",
+    "amount": 45
+  },
+  {
+    "transactionId": "T1002",
+    "customerId": "C2",
+    "customerName": "Sarah Lee",
+    "date": "2023-02-05",
+    "product": "Keyboard",
+    "amount": 75.5
+  },
+  {
+    "transactionId": "T1003",
+    "customerId": "C4",
+    "customerName": "Michael Brown",
+    "date": "2023-02-18",
+    "product": "USB Hub",
+    "amount": 48.5
+  },
+  {
+    "transactionId": "T1004",
+    "customerId": "C2",
+    "customerName": "Sarah Lee",
+    "date": "2023-02-20",
+    "product": "Mouse Pad",
+    "amount": 125.75
+  },
+  {
+    "transactionId": "T1005",
+    "customerId": "C1",
+    "customerName": "John Smith",
+    "date": "2023-03-18",
+    "product": "Monitor",
+    "amount": 120.99
+  },
+  {
+    "transactionId": "T1006",
+    "customerId": "C3",
+    "customerName": "Emily Davis",
+    "date": "2023-03-27",
+    "product": "Desk Chair",
+    "amount": 150
+  },
+  {
+    "transactionId": "T1007",
+    "customerId": "C4",
+    "customerName": "Michael Brown",
+    "date": "2024-01-08",
+    "product": "External Drive",
+    "amount": 95.1
+  },
+  {
+    "transactionId": "T1008",
+    "customerId": "C2",
+    "customerName": "Sarah Lee",
+    "date": "2024-02-14",
+    "product": "Printer",
+    "amount": 200
+  },
+  {
+    "transactionId": "T1009",
+    "customerId": "C3",
+    "customerName": "Emily Davis",
+    "date": "2024-02-22",
+    "product": "Webcam",
+    "amount": 60
+  },
+  {
+    "transactionId": "T1010",
+    "customerId": "C1",
+    "customerName": "John Smith",
+    "date": "2024-03-11",
+    "product": "Smart Speaker",
+    "amount": 130.6
+  },
+  {
+    "transactionId": "T1011",
+    "customerId": "C2",
+    "customerName": "Sarah Lee",
+    "date": "2025-01-06",
+    "product": "Headphones",
+    "amount": 100
+  },
+  {
+    "transactionId": "T1012",
+    "customerId": "C4",
+    "customerName": "Michael Brown",
+    "date": "2025-02-19",
+    "product": "Tablet",
+    "amount": 180.89
+  },
+  {
+    "transactionId": "T1013",
+    "customerId": "C1",
+    "customerName": "John Smith",
+    "date": "2025-02-25",
+    "product": "Coffee Machine",
+    "amount": 55
+  },
+  {
+    "transactionId": "T1014",
+    "customerId": "C3",
+    "customerName": "Emily Davis",
+    "date": "2025-03-09",
+    "product": "Air Fryer",
+    "amount": 160
+  }
+]
