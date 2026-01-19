@@ -66,7 +66,8 @@ src/
 
 <img width="1333" height="524" alt="image" src="https://github.com/user-attachments/assets/f9a26d62-5130-4576-b007-ddaeb2a90952" />
 
-<img width="1366" height="732" alt="image" src="https://github.com/user-attachments/assets/455ad93d-dc27-47bc-8c6a-ca7a0acc6bcc" />
+<img width="1347" height="717" alt="image" src="https://github.com/user-attachments/assets/18598693-7a84-4033-a5e1-b08899e9f56c" />
+
 
 
 
