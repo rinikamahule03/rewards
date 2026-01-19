@@ -10,7 +10,7 @@ const App = () => {
   const { loading, error, transactions, monthlyRewards, totalRewards } = useRewardsData();
 
   if (loading) return <Loader />;
-  if (error) return <p>Error: {error.message}</p>;
+  if (error) return <div className="error-container"><h1 className="error-title">Ooops!</h1><p className="error-message">Error: {error.message}</p></div>;
 
   return (
     <div style={{ padding: "20px" }}>
