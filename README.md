@@ -57,3 +57,13 @@ src/
  ├─ App.jsx
  ├─ App.css                    # Table styles 
  └─ index.js
+
+ Screenshots for reference:
+
+<img width="1364" height="728" alt="image" src="https://github.com/user-attachments/assets/0a3cfb09-128b-4351-9892-67bc04117ac2" />
+
+<img width="1304" height="276" alt="image" src="https://github.com/user-attachments/assets/7da35a2e-92d1-407c-9182-1955c6e655fe" />
+
+<img width="1333" height="524" alt="image" src="https://github.com/user-attachments/assets/f9a26d62-5130-4576-b007-ddaeb2a90952" />
+
+
