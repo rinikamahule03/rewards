@@ -37,9 +37,28 @@ export const aggregateMonthlyRewards = (transactions) =>
 /**
  * Aggregate total rewards by customer
  */
-export const buildTotalRewards = (transactions) =>
-  transactions.reduce((acc, tx) => {
+export const buildTotalRewards = (transactions) => {
+  const acc = transactions.reduce((map, tx) => {
     const points = calculateRewardPoints(tx.amount);
-    acc[tx.customerName] = (acc[tx.customerName] || 0) + points;
-    return acc;
+    const key = tx.customerId;
+
+    if (!map[key]) {
+      map[key] = {
+        customerId: tx.customerId || "",
+        customerName: tx.customerName || "",
+        amountSpent: 0,
+        rewardPoints: 0
+      };
+    }
+
+    map[key].rewardPoints += points;
+    map[key].amountSpent += tx.amount;
+    return map;
   }, Object.create(null));
+
+  // return an array of { customerId, customerName, rewardPoints }
+  return Object.values(acc).map(c => ({
+    ...c,
+    amountSpent: `$${c.amountSpent.toFixed(2)}` // To always keep 2 decimals
+  }));
+};

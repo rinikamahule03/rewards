@@ -18,14 +18,12 @@ export const useRewardsData = () => {
         const monthlyMap = aggregateMonthlyRewards(data);
         const monthlyRewards = Object.values(monthlyMap).sort((a, b) => a.sortKey - b.sortKey);
 
-        const totalRewardsArray = Object.entries(buildTotalRewards(data)).map(([name, rewardPoints]) => ({ name, rewardPoints }));
-
         setState({
           loading: false,
           error: null,
           transactions: data,
           monthlyRewards,
-          totalRewards: totalRewardsArray
+          totalRewards: buildTotalRewards(data)
         });
       })
       .catch((error) => {

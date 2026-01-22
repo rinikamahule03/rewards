@@ -1,28 +1,25 @@
+import React from "react";
 import PropTypes from "prop-types";
+import Table from "./table/Table";
+
+const ROW_OPTIONS = [5, 10, 25];
 
 const TotalRewardsTable = ({ totalRewards }) => {
-  if (!totalRewards.length) return <p>No total rewards data.</p>;
+  const columns = [
+    { header: "Customer ID", key: "customerId" },
+    { header: "Customer name", key: "customerName" },
+    { header: "Total amount spent", key: "amountSpent" },
+    { header: "Total reward points", key: "rewardPoints" }
+  ];
 
   return (
-    <div>
-      <h2>Total rewards</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Customer name</th>
-            <th>Total reward points</th>
-          </tr>
-        </thead>
-        <tbody>
-          {totalRewards.map(({ name, rewardPoints }) => (
-            <tr key={name}>
-              <td>{name}</td>
-              <td>{rewardPoints}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <Table
+      title="Total rewards"
+      columns={columns}
+      data={totalRewards}
+      rowsPerPageOptions={ROW_OPTIONS}
+      noDataText="No total rewards data."
+    />
   );
 };
 

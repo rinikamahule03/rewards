@@ -1,34 +1,26 @@
+import React from "react";
 import PropTypes from "prop-types";
+import Table from "./table/Table";
+
+const ROW_OPTIONS = [5, 10, 25];
 
 const MonthlyRewardsTable = ({ monthlyRewards }) => {
-  if (!monthlyRewards.length) return <p>No monthly rewards data.</p>;
+  const columns = [
+    { header: "Customer ID", key: "customerId" },
+    { header: "Customer name", key: "name" },
+    { header: "Month", key: "month" },
+    { header: "Year", key: "year" },
+    { header: "Reward Points", key: "rewardPoints" }
+  ];
 
   return (
-    <div>
-      <h2>User monthly rewards</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Customer ID</th>
-            <th>Name</th>
-            <th>Month</th>
-            <th>Year</th>
-            <th>Reward Points</th>
-          </tr>
-        </thead>
-        <tbody>
-          {monthlyRewards.map((r, index) => (
-            <tr key={index}>
-              <td>{r.customerId}</td>
-              <td>{r.name}</td>
-              <td>{r.month}</td>
-              <td>{r.year}</td>
-              <td>{r.rewardPoints}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <Table
+      title="User monthly rewards"
+      columns={columns}
+      data={monthlyRewards}
+      rowsPerPageOptions={ROW_OPTIONS}
+      noDataText="No monthly rewards data available."
+    />
   );
 };
 
