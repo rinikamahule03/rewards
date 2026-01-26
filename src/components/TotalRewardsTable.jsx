@@ -6,10 +6,10 @@ const ROW_OPTIONS = [5, 10, 25];
 
 const TotalRewardsTable = ({ totalRewards }) => {
   const columns = [
-    { header: "Customer ID", key: "customerId" },
-    { header: "Customer name", key: "customerName" },
-    { header: "Total amount spent", key: "amountSpent" },
-    { header: "Total reward points", key: "rewardPoints" }
+    { headerName: "Customer ID", field: "customerId", flex: 1 },
+    { headerName: "Customer name", field: "customerName", flex: 1 },
+    { headerName: "Total amount spent", field: "amountSpent", flex: 1 },
+    { headerName: "Total reward points", field: "rewardPoints", flex: 1 }
   ];
 
   return (

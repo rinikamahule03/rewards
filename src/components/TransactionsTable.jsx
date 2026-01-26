@@ -7,12 +7,12 @@ const ROW_OPTIONS = [5, 10, 25];
 
 const TransactionsTable = ({ transactions }) => {
   const columns = [
-    { header: "Transaction ID", key: "transactionId" },
-    { header: "Customer name", key: "customerName" },
-    { header: "Purchase date", render: (tx) => new Date(tx.date).toLocaleDateString() },
-    { header: "Product purchased", key: "product" },
-    { header: "Price", render: (tx) => `$${tx.amount.toFixed(2)}` },
-    { header: "Reward points", render: (tx) => calculateRewardPoints(tx.amount) }
+    { headerName: "Transaction ID", field: "transactionId", flex: 1 },
+    { headerName: "Customer name", field: "customerName", flex: 1 },
+    { headerName: "Purchase date", field: "purchaseDate", flex: 1, valueGetter: (value, tx) => new Date(tx?.date).toLocaleDateString() },
+    { headerName: "Product purchased", field: "product", flex: 1 },
+    { headerName: "Price", field: "amount", flex: 1, valueGetter: (value, tx) => `$${tx?.amount?.toFixed(2)}` },
+    { headerName: "Reward points", field: "rewardPoints", flex: 1, valueGetter: (value, tx) => calculateRewardPoints(tx?.amount) }
   ];
 
   return (

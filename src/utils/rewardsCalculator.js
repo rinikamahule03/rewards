@@ -34,6 +34,47 @@ export const aggregateMonthlyRewards = (transactions) =>
     return acc;
   }, {});
 
+//   export const aggregateMonthlyRewards = (transactions) => {
+//   // Build a map per customer, then a months map per customer to collect transactions
+//   const customers = transactions.reduce((acc, tx) => {
+//     const { month, year, sortKey } = getMonthYearKey(tx.date);
+//     const points = calculateRewardPoints(tx.amount || 0);
+//     const customerKey = tx.customerId || tx.customerName || "__unknown__";
+
+//     acc[customerKey] = acc[customerKey] || {
+//       customerId: tx.customerId || "",
+//       name: tx.customerName || "",
+//       months: Object.create(null)
+//     };
+
+//     const mKey = `${year}-${month}`;
+//     const months = acc[customerKey].months;
+
+//     if (!months[mKey]) {
+//       months[mKey] = {
+//         month,
+//         year,
+//         sortKey,
+//         rewardPoints: 0,
+//         transactions: []
+//       };
+//     }
+
+//     months[mKey].transactions.push(tx);
+//     months[mKey].rewardPoints += points;
+
+//     return acc;
+//   }, Object.create(null));
+
+//   // Convert months map to an array (sorted by sortKey) and return per-customer objects
+//   return Object.values(customers).map((c) => ({
+//     customerId: c.customerId,
+//     name: c.name,
+//     monthly: Object.values(c.months).sort((a, b) => a.sortKey - b.sortKey)
+//   }));
+// };
+
+
 /**
  * Aggregate total rewards by customer
  */

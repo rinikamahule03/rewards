@@ -1,6 +1,6 @@
 import React from "react";
 import { useRewardsData } from "../../hooks/useRewardsData";
-import Loader from "../../components/Loader";
+import Loader from "../../components/loader/Loader";
 import TransactionsTable from "../../components/TransactionsTable";
 import MonthlyRewardsTable from "../../components/MonthlyRewardsTable";
 import TotalRewardsTable from "../../components/TotalRewardsTable";

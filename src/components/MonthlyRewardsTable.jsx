@@ -6,11 +6,11 @@ const ROW_OPTIONS = [5, 10, 25];
 
 const MonthlyRewardsTable = ({ monthlyRewards }) => {
   const columns = [
-    { header: "Customer ID", key: "customerId" },
-    { header: "Customer name", key: "name" },
-    { header: "Month", key: "month" },
-    { header: "Year", key: "year" },
-    { header: "Reward Points", key: "rewardPoints" }
+    { headerName: "Customer ID", field: "customerId", flex: 1 },
+    { headerName: "Customer name", field: "name", flex: 1 },
+    { headerName: "Month", field: "month", flex: 1 },
+    { headerName: "Year", field: "year", flex: 1 },
+    { headerName: "Reward Points", field: "rewardPoints", flex: 1 }
   ];
 
   return (
