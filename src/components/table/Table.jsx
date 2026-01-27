@@ -43,6 +43,7 @@ const Table = ({ title, columns, data = [], rowsPerPageOptions = null, noDataTex
             },
           },
         }}
+        getRowHeight={() => 'auto'}
         getRowId={(row) => row.transactionId || row.customerId}
         pageSizeOptions={rowsPerPageOptions}
       />

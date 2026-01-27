@@ -16,13 +16,12 @@ export const useRewardsData = () => {
     fetchTransactions()
       .then((data) => {
         const monthlyMap = aggregateMonthlyRewards(data);
-        const monthlyRewards = Object.values(monthlyMap).sort((a, b) => a.sortKey - b.sortKey);
 
         setState({
           loading: false,
           error: null,
           transactions: data,
-          monthlyRewards,
+          monthlyRewards: monthlyMap,
           totalRewards: buildTotalRewards(data)
         });
       })

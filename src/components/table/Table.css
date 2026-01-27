@@ -31,3 +31,31 @@
   background: transparent !important;
   box-shadow: none !important;
 }
+
+/* Table rows and cells */
+.MuiDataGrid-root .MuiDataGrid-row {
+  line-height: 3.5 /* comfortable line height for rows */
+}
+
+/* Column separators for body rows */
+.MuiDataGrid-root .MuiDataGrid-row .MuiDataGrid-cell {
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Remove separator on the last cell of each row */
+.MuiDataGrid-root .MuiDataGrid-row .MuiDataGrid-cell:last-child {
+  border-right: none;
+}
+
+/* hide row separators on very small screens to reduce visual clutter */
+@media (max-width: 600px) {
+  .MuiDataGrid-root .MuiDataGrid-row .MuiDataGrid-cell {
+    border-right: none;
+  }
+}
+
+.row-line {
+  line-height: 2.5;
+}
+
+
