@@ -16,7 +16,12 @@ import { getMonthYearKey } from "./dateUtils";
  * calculateRewardPoints(75.5)   // -> 25  (1*(75-50) = 25)
  */
 export const calculateRewardPoints = (amount) => {
-  const dollars = Math.floor(amount); // decimal safe
+  const num = Number(amount);
+
+  // guard: invalid numbers (NaN, Infinity) or non-positive amounts -> 0 points
+  if (!Number.isFinite(num) || num <= 0) return 0;
+
+  const dollars = Math.floor(num); // ignore cents
   return Math.max(dollars - 100, 0) * 2 + Math.max(Math.min(dollars, 100) - 50, 0);
 };
 
@@ -132,7 +137,10 @@ export const calculateRewardPoints = (amount) => {
  */
 export const buildTotalRewards = (transactions) => {
   const acc = transactions.reduce((map, tx) => {
-    const points = calculateRewardPoints(tx.amount);
+    // validate amount -> use finite positive number, otherwise 0
+    const raw = Number(tx.amount);
+    const safeAmount = Number.isFinite(raw) && raw > 0 ? raw : 0;
+    const points = calculateRewardPoints(safeAmount);
     const key = tx.customerId;
 
     if (!map[key]) {
@@ -145,7 +153,7 @@ export const buildTotalRewards = (transactions) => {
     }
 
     map[key].rewardPoints += points;
-    map[key].amountSpent += tx.amount;
+    map[key].amountSpent += safeAmount;
     return map;
   }, Object.create(null));
 

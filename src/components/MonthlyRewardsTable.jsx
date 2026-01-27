@@ -9,18 +9,18 @@ const MonthlyRewardsTable = ({ monthlyRewards }) => {
     { headerName: "Customer ID", field: "customerId", flex: 1 },
     { headerName: "Customer name", field: "name", flex: 1 },
     { headerName: "Transaction month", sortable: false, field: "monthly", flex: 1, renderCell: (params) => {
-      return params.value.map((m, i) => <div key={i} className="row-line">
-        {m.month} {m.year}
+      return params?.value?.map((m, i) => <div key={i} className="row-line">
+        {m?.month} {m?.year}
       </div>);
     }},
     { headerName: "Monthly amount spent", sortable: false, field: "amountSpent", flex: 1, renderCell: (params) => {
-      return params.row.monthly.map((m, i) => <div key={i} className="row-line">
-        {m.amountSpent}
+      return params?.row?.monthly?.map((m, i) => <div key={i} className="row-line">
+        {m?.amountSpent}
       </div>);
     }},
     { headerName: "Monthly reward Points", sortable: false, field: "rewardPoints", flex: 1, renderCell: (params) => {
-      return params.row.monthly.map((m, i) => <div key={i} className="row-line">
-        {m.rewardPoints}
+      return params?.row?.monthly?.map((m, i) => <div key={i} className="row-line">
+        {m?.rewardPoints}
       </div>);
     }}
   ];
