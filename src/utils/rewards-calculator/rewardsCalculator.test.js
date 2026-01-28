@@ -1,4 +1,4 @@
-import { calculateRewardPoints, aggregateMonthlyRewards, buildTotalRewards } from "./rewardsCalculator";
+import { calculateRewardPoints, aggregateMonthlyRewards, buildTotalRewards, priceSortComparator } from "./rewardsCalculator";
 
 describe("calculateRewardPoints - expected numeric behavior", () => {
   test("handles typical buckets and floors cents", () => {
@@ -110,5 +110,29 @@ describe("buildTotalRewards", () => {
 
   test("returns empty array when given no transactions", () => {
     expect(buildTotalRewards([])).toEqual([]);
+  });
+});
+
+describe("priceSortComparator", () => {
+  test("parses strings with $, commas and whitespace correctly", () => {
+    expect(priceSortComparator(" $1,234.56 ", "1000")).toBeCloseTo(234.56);
+  });
+
+  test("handles numeric inputs", () => {
+    expect(priceSortComparator(10, 20)).toBe(-10);
+    expect(priceSortComparator(20, 10)).toBe(10);
+  });
+
+  test("treats non-numeric strings and missing values as 0", () => {
+    expect(priceSortComparator("abc", "$5")).toBe(-5);
+    expect(priceSortComparator(null, undefined)).toBe(0);
+    expect(priceSortComparator("   ", 2)).toBe(-2);
+  });
+
+  test("works as comparator for Array.prototype.sort (ascending)", () => {
+    const arr = ["$1,200.00", "$50", "300", null, "$0.50"];
+    const expected = [null, "$0.50", "$50", "300", "$1,200.00"];
+    arr.sort(priceSortComparator);
+    expect(arr).toEqual(expected);
   });
 });

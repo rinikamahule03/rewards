@@ -163,3 +163,32 @@ export const buildTotalRewards = (transactions) => {
     amountSpent: `$${c.amountSpent.toFixed(2)}` // To always keep 2 decimals
   }));
 };
+
+/**
+ * Compare two price values (strings like "$1,234.56" or numeric values) by their
+ * numeric value so the function can be used directly as an Array.prototype.sort
+ * comparator.
+ *
+ * Behavior:
+ * - Accepts a or b as a number or string. Strings may include a leading "$",
+ *   commas, and surrounding whitespace (e.g. " $1,234.56 ").
+ * - Non-numeric or missing inputs are treated as 0 (for sorting purposes).
+ * - Returns (numericA - numericB): negative if a < b, zero if equal, positive if a > b.
+ *
+ * @param {string|number|null|undefined} a
+ * @param {string|number|null|undefined} b
+ * @returns {number} numeric difference (a - b) suitable for use as a comparator
+ */
+export const priceSortComparator = (a, b) => {
+  const parsePrice = (val) => {
+    if (typeof val === "number") return Number.isFinite(val) ? val : 0;
+    if (typeof val !== "string") return 0;
+    const cleaned = val.trim().replace(/^\$/, "").replace(/,/g, "");
+    const num = parseFloat(cleaned);
+    return Number.isFinite(num) ? num : 0;
+  };
+
+  const numA = parsePrice(a);
+  const numB = parsePrice(b);
+  return numA - numB;
+};

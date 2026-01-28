@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Table from "../table/Table";
+import { priceSortComparator } from "../../utils/rewards-calculator/rewardsCalculator";
 
 const ROW_OPTIONS = [5, 10, 25];
 
@@ -8,7 +9,7 @@ const TotalRewardsTable = ({ totalRewards }) => {
   const columns = [
     { headerName: "Customer ID", field: "customerId", flex: 1 },
     { headerName: "Customer name", field: "customerName", flex: 1 },
-    { headerName: "Total amount spent", field: "amountSpent", flex: 1 },
+    { headerName: "Total amount spent", field: "amountSpent", flex: 1, sortComparator: priceSortComparator },
     { headerName: "Total reward points", field: "rewardPoints", flex: 1 }
   ];
 
