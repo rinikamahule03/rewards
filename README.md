@@ -65,3 +65,33 @@ Tests
   - src/components/monthly-rewards-table/MonthlyRewardsTable.test.jsx
   - src/components/transactions-table/TransactionsTable.test.js
   - src/utils/rewards-calculator/rewardsCalculator.test.js
+ 
+Screenshots for reference:
+
+- Tables
+
+- Monthly rewards table
+<img width="1348" height="606" alt="image" src="https://github.com/user-attachments/assets/23b2296a-2741-4714-ad11-cbd71942105e" />
+
+
+
+
+- Total rewards table
+<img width="1330" height="451" alt="image" src="https://github.com/user-attachments/assets/8d46f819-3c74-47c1-a313-affe67dd27c8" />
+
+
+
+- Transactions table
+<img width="1316" height="461" alt="image" src="https://github.com/user-attachments/assets/378190a0-2833-4ce6-ae0c-c5caf10bf9c9" />
+
+
+
+- Errors
+
+<img width="1366" height="637" alt="image" src="https://github.com/user-attachments/assets/c67286df-b875-4b4f-a576-12363b63b43f" />
+
+<img width="1345" height="622" alt="image" src="https://github.com/user-attachments/assets/80bc8903-bfbc-4ac3-a5c5-1afbdab41722" />
+
+
+
+
