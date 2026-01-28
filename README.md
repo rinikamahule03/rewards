@@ -68,10 +68,8 @@ Tests
  
 Screenshots for reference:
 
-- Tables
-
 - Monthly rewards table
-<img width="1348" height="606" alt="image" src="https://github.com/user-attachments/assets/23b2296a-2741-4714-ad11-cbd71942105e" />
+<img width="1320" height="603" alt="image" src="https://github.com/user-attachments/assets/06b286dd-3e4d-4af5-99d9-5ded0b12cafd" />
 
 
 
@@ -84,6 +82,9 @@ Screenshots for reference:
 - Transactions table
 <img width="1316" height="461" alt="image" src="https://github.com/user-attachments/assets/378190a0-2833-4ce6-ae0c-c5caf10bf9c9" />
 
+
+- When no records found
+<img width="1320" height="612" alt="image" src="https://github.com/user-attachments/assets/320a1470-79da-43da-bd2c-0546dc7284df" />
 
 
 - Errors
