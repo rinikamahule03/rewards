@@ -1,13 +1,20 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+code {
+    font-family: "Arial";
+}
+
+html, body, #root {
+  font-family: "Arial monospace", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Ensure Material-UI / DataGrid and other components inherit the same font */
+.MuiDataGrid-root,
+.MuiDataGrid-cell,
+.MuiDataGrid-columnHeader,
+button,
+input,
+select,
+textarea {
+  font-family: "Arial";
 }
