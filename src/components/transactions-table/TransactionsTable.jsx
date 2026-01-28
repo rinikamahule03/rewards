@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { calculateRewardPoints } from "../utils/rewardsCalculator";
-import Table from "./table/Table";
+import { calculateRewardPoints } from "../../utils/rewards-calculator/rewardsCalculator";
+import Table from "../table/Table";
 
 const ROW_OPTIONS = [5, 10, 25];
 

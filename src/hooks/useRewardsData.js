@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchTransactions } from "../api/rewardsApi";
-import { aggregateMonthlyRewards, buildTotalRewards } from "../utils/rewardsCalculator";
+import { aggregateMonthlyRewards, buildTotalRewards } from "../utils/rewards-calculator/rewardsCalculator";
 import { logger } from "../utils/logger";
 
 export const useRewardsData = () => {

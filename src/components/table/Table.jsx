@@ -32,9 +32,12 @@ Table.propTypes = {
   title: PropTypes.string,
   columns: PropTypes.arrayOf(
     PropTypes.shape({
-      header: PropTypes.string.isRequired,
-      key: PropTypes.string,
-      render: PropTypes.func
+      headerName: PropTypes.string.isRequired,
+      field: PropTypes.string.isRequired,
+      valueGetter: PropTypes.func,
+      renderCell: PropTypes.func,
+      sortable: PropTypes.bool,
+      flex: PropTypes.number
     })
   ).isRequired,
   data: PropTypes.array,

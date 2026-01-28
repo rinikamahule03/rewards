@@ -1,9 +1,9 @@
 import React from "react";
 import { useRewardsData } from "../../hooks/useRewardsData";
 import Loader from "../../components/loader/Loader";
-import TransactionsTable from "../../components/TransactionsTable";
-import MonthlyRewardsTable from "../../components/MonthlyRewardsTable";
-import TotalRewardsTable from "../../components/TotalRewardsTable";
+import TransactionsTable from "../transactions-table/TransactionsTable";
+import MonthlyRewardsTable from "../monthly-rewards-table/MonthlyRewardsTable";
+import TotalRewardsTable from "../total-rewards-table/TotalRewardsTable";
 import ErrorPage from "../../components/error/ErrorPage";
 import "./RewardsDashboard.css";
 

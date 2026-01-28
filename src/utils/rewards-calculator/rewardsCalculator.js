@@ -1,4 +1,4 @@
-import { getMonthYearKey } from "./dateUtils";
+import { getMonthYearKey } from "../dateUtils";
 
 /**
  * Calculate reward points for a single transaction amount.
