@@ -69,12 +69,22 @@ Tests
 Screenshots for reference:
 
 - Tables
-  
-<img width="1365" height="731" alt="image" src="https://github.com/user-attachments/assets/5a079c36-8c3f-45c0-9053-b73ee415462d" />
 
-<img width="1345" height="642" alt="image" src="https://github.com/user-attachments/assets/16591f92-8900-4093-b949-5b7123b3ae7f" />
+- Monthly rewards table
+<img width="1348" height="606" alt="image" src="https://github.com/user-attachments/assets/23b2296a-2741-4714-ad11-cbd71942105e" />
 
-<img width="1358" height="585" alt="image" src="https://github.com/user-attachments/assets/74da432a-9d5a-44e0-9252-397c2e4cf61b" />
+
+
+
+- Total rewards table
+<img width="1330" height="451" alt="image" src="https://github.com/user-attachments/assets/8d46f819-3c74-47c1-a313-affe67dd27c8" />
+
+
+
+- Transactions table
+<img width="1316" height="461" alt="image" src="https://github.com/user-attachments/assets/378190a0-2833-4ce6-ae0c-c5caf10bf9c9" />
+
+
 
 - Errors
 
