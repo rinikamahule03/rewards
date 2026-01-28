@@ -1,8 +1,12 @@
 /* Table headers */
 
+.table-container {
+  margin-bottom: 40px;
+}
+
 .MuiDataGrid-root .MuiDataGrid-columnHeaders,
 .MuiDataGrid-root .MuiDataGrid-columnHeader {
-  background-color: #1c697e !important;
+  background-color: var(--primary-color) !important;
   color: #fff !important;
 }
 
@@ -56,6 +60,11 @@
 
 .row-line {
   line-height: 2.5;
+}
+
+.no-data-text {
+  font-style: italic;
+  color: #666;
 }
 
 

@@ -6,6 +6,7 @@ html, body, #root {
   font-family: "Arial monospace", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --primary-color: #1c697e;
 }
 
 /* Ensure Material-UI / DataGrid and other components inherit the same font */

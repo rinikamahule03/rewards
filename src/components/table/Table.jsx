@@ -4,26 +4,28 @@ import "./Table.css";
 import { DataGrid } from '@mui/x-data-grid';
 
 const Table = ({ title, columns, data = [], rowsPerPageOptions = null, noDataText }) => {
-  if (!data || !data.length) return <p>{noDataText || `No ${title?.toLowerCase() || "data"} available.`}</p>;
-
   return (
-    <div>
+    <div className="table-container">
       {title && <h2>{title}</h2>}
 
-      <DataGrid
-        rows={data}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: {
-              pageSize: rowsPerPageOptions && rowsPerPageOptions.length > 0 ? rowsPerPageOptions[0] : data.length,
+      {(!data || !data.length) ?
+        <p className="no-data-text">{noDataText || `No ${title?.toLowerCase() || "data"} available.`}</p>
+      :
+        <DataGrid
+          rows={data}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: {
+                pageSize: rowsPerPageOptions && rowsPerPageOptions.length > 0 ? rowsPerPageOptions[0] : data.length,
+              },
             },
-          },
-        }}
-        getRowHeight={() => 'auto'}
-        getRowId={(row) => row?.transactionId || row?.customerId}
-        pageSizeOptions={rowsPerPageOptions}
-      />
+          }}
+          getRowHeight={() => 'auto'}
+          getRowId={(row) => row?.transactionId || row?.customerId}
+          pageSizeOptions={rowsPerPageOptions}
+        />
+      }
     </div>
   );
 };
