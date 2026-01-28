@@ -26,7 +26,9 @@ const TotalRewardsTable = ({ totalRewards }) => {
 TotalRewardsTable.propTypes = {
   totalRewards: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string.isRequired,
+      customerId: PropTypes.string.isRequired,
+      customerName: PropTypes.string.isRequired,
+      amountSpent: PropTypes.number.isRequired,
       rewardPoints: PropTypes.number.isRequired
     })
   ).isRequired
